@@ -1,0 +1,148 @@
+.network-health-screen {
+
+  // Text overflow
+  .text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  position: relative;
+  width: 1280px;
+  height: 724px;
+  background: url(img/bg.jpg) no-repeat 0 0;
+  -webkit-background-size: cover;
+  background-size: 100% 100%;
+
+  .screen-time {
+    font-size: 16px;
+    position: absolute;
+    left: 22px;
+    top: 13px;
+    font-weight: bold;
+    color: #4ecbff;
+  }
+
+  .network-health-title {
+    font-size: 20px;
+    color: #4ecbff;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .network-health-map {
+    height: 600px;
+    margin-top: -40px;
+
+    > div > div {
+      margin: 0 auto !important;
+    }
+  }
+
+  .network-health-list {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    padding: 0 16px;
+    width: 100%;
+
+    .network-health-list-inner {
+      position: relative;
+      padding: 10px;
+      border-top: 1px solid #0967ad;
+      border-bottom: 1px solid #0967ad;
+
+      &:before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #13579c;
+        opacity: 0.3;
+      }
+    }
+
+    .ant-tabs-bar {
+      border-color: #0967ad;
+    }
+
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+      background: transparent;
+      border-color: #0967ad;
+      color: #ffffff;
+      width: 20%;
+
+      > div {
+        .text-overflow();
+      }
+    }
+
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+      background: rgba(1, 156, 255, 0.3);
+    }
+
+    .ant-tabs-nav {
+      width: 100%;
+      padding-right: 8px;
+    }
+
+    .ant-table {
+      color: #ffffff;
+      border: 1px solid #0967ad;
+      border-radius: 0;
+    }
+
+    .ant-table table {
+      border-radius: 0;
+      table-layout: fixed;
+    }
+
+    .ant-table-thead {
+      background: rgba(1, 156, 255, 0.3);
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      border: none;
+      padding: 6px 10px;
+      .text-overflow();
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .ant-table-thead > tr:hover > td,
+    .ant-table-tbody > tr:hover > td {
+      background: transparent;
+    }
+
+    .ant-row .ant-col-12 {
+      padding-left: 10px;
+    }
+    .ant-row .ant-col-12:first-child {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+
+    .ant-carousel .slick-slide {
+      height: 150px;
+      overflow: hidden;
+    }
+    .slick-slide,
+    .slick-slider {
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+      transition: none;
+    }
+
+  }
+
+  .text-red {
+    color: #ff4242;
+  }
+}

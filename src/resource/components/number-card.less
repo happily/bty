@@ -1,0 +1,70 @@
+.number-card {
+  @keyframes number-card-animate {
+    0% {
+      background-color: #177dcf;
+      transform: rotateX(180deg);
+    }
+    50% {
+      background-color: #044980;
+    }
+    100% {
+      ransform: rotateX(0deg);
+    }
+  }
+
+  &:extend(.clearfix);
+  display: inline-block;
+
+  .number-card-item {
+    position: relative;
+    font-size: 38px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 28px;
+    color: #ffffff;
+    margin-left: 5px;
+    /*background-color: #06599b;*/
+    background-color: #0094f3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .number-card-up, .number-card-down {
+    height: 24px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .number-card-down {
+    line-height: 0;
+    margin-top: 2px;
+  }
+
+  .number-card-hide {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    z-index: 1;
+    line-height: 0;
+    background-color: #0094f3;
+    text-align: center;
+    transform-origin: center top;
+    overflow: hidden;
+
+  }
+
+  .number-card-animate {
+    animation: number-card-animate .6s linear;
+
+  }
+
+}

@@ -1,0 +1,392 @@
+.cloudMonitor {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  color: #ffffff;
+  font-family: SimHei, '黑体', Helvetica, "Microsoft Yahei", Arial, sans-serif;
+  background: #050f27;
+  .cloudMonitor-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: url("img/bg1.png");
+    padding: 42px 58px;
+  }
+  .cloudMonitor_chart{
+    position: absolute;
+    left: 0;
+    top: 63px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 45px 58px;
+  }
+  .title {
+    font-size: 15px;
+    text-align: center;
+    color: #c1dbfd;
+  }
+  .datetime {
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    padding-top: 44px;
+    font-size: 18px;
+  }
+//第一排数据
+  .border-red{
+    border: 1px solid red;
+  }
+  .chart-row-one{
+    margin-top:10px;
+    height: 300px;
+    .left-content{
+      float: left;
+      width: 605px;
+      height: 300px;
+      ul{
+        overflow: hidden;
+        padding-top: 20px;
+        li{
+          height: 200px;
+          margin: 0 20px;
+          float: left;
+          .total{
+            margin-top: 80px;
+            width: 240px;
+            height: 120px;
+            text-align: center;
+            .total-text{
+              font-size: 15px;
+              text-align: center;
+              margin-top: 15px;
+            }
+          }
+          .pie {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+      }
+    }
+    .right-content{
+      float: left;
+      width: 1195px;
+      height: 300px;
+      padding-left: 16px;
+      .chart {
+        height: 220px;
+        margin-top:30px;
+        margin-left: 60px;
+        margin-right: 70px;
+      }
+    }
+  }
+  .chart-row-two{
+    margin-top:5px;
+    height: 306px;
+    .left-content{
+      float: left;
+      width: 892px;
+      height: 280px;
+      .chart-trend{
+        padding: 10px;
+        height: 230px;
+        margin: 20px;
+      }
+    }
+    .right-content{
+      float: left;
+      width: 910px;
+      height: 280px;
+      padding-left: 20px;
+      .chart-active {
+        padding: 10px;
+        height: 230px;
+        margin: 20px;
+      }
+    }
+  }
+  .chart-row-thr{
+    margin-top:5px;
+    height: 300px;
+    .left-content{
+      float: left;
+      width: 480px;
+      height: 280px;
+      padding-left: 30px;
+      .title{
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 28px;
+      }
+      .chart-distribution{
+        //padding: 10px;
+        height: 200px;
+        padding-left: 20px;
+        padding-top: 15px;
+      }
+    }
+    .right-content{
+      float: right;
+      width: 1300px;
+      height: 280px;
+      padding: 0 20px;
+      .div-table{
+        height: 230px;
+        margin: 0px;
+        padding-top: 40px;
+        table{
+          width: 100%;
+          border: 1px solid #2d456b;
+          border-right: 0;
+          border-bottom: 0;
+          font-size: 11px;
+          color: #c1dbfd;
+          thead>tr>th {
+            background:rgba(13,88,178,0.2);
+            text-align: left;
+            color: #c1dbfd;
+          }
+          tbody>tr>td, thead>tr>th {
+            border-right: 1px solid #2d456b;
+          }
+          tbody>tr>td, thead>tr>th {
+            height: 40px;
+            padding: 0px 20px;
+            word-break: break-all;
+          }
+          thead>tr>th,tbody>tr>td {
+            border-bottom: 1px solid #2d456b;
+          }
+        }
+      }
+    }
+  }
+
+  .red {
+    color: #fd5743;
+  }
+  .white {
+    color: #ffffff;
+  }
+  .green {
+    color: #56be28;
+  }
+  .orange {
+    color: #f7d42c;
+  }
+
+  @keyframes sky {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .sky_bg {
+    background: url("img/bg1.jpg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: sky 5s infinite ease-in;
+  }
+  .sky_bg_static {
+    background: url("img/bg1.jpg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @keyframes corner_bg {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .corner_bg {
+    background: url("img/corner_bg.png") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: corner_bg 3s infinite linear;
+  }
+
+  /*@keyframes flipInY {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      opacity: 1;
+    }
+
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
+    }
+  }*/
+  @keyframes meteor-left {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    1.6458% {
+      transform: translate(100px, 0) rotate(0deg);
+    }
+    2.6333% {
+      transform: translate(167px, -11px) rotate(-40deg);
+    }
+    3.8677% {
+      transform: translate(235px, -33px) rotate(0deg);
+    }
+    8.443% {
+      transform: translate(513px, -33px) rotate(0deg);
+    }
+    9.25% {
+      transform: translate(562px, 14px) rotate(90deg);
+    }
+    24.226% {
+      transform: translate(562px, 910px) rotate(90deg);
+    }
+    25.066% {
+      transform: translate(524px, 961px) rotate(180deg);
+    }
+    45.227% {
+      transform: translate(-1225px, 961px) rotate(180deg);
+    }
+    46.07% {
+      transform: translate(-1276px, 918px) rotate(270deg);
+    }
+    60.846% {
+      transform: translate(-1276px, 20px) rotate(270deg);
+    }
+    61.734% {
+      transform: translate(-1232px, -34px) rotate(360deg);
+    }
+    65.96% {
+      transform: translate(-957px, -34px) rotate(360deg);
+    }
+    66.9% {
+      transform: translate(-900px, -30px) rotate(400deg);
+    }
+    68.22% {
+      transform: translate(-822px, 0px) rotate(360deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(360deg);
+    }
+  }
+  @keyframes meteor-right {
+    0% {
+      transform: translate(0, 0) rotate(180deg);
+    }
+    1.6458% {
+      transform: translate(-100px, 0) rotate(180deg);
+    }
+    2.6333% {
+      transform: translate(-175px, -15px) rotate(220deg);
+    }
+    3.8677% {
+      transform: translate(-235px, -33px) rotate(180deg);
+    }
+    8.443% {
+      transform: translate(-525px, -33px) rotate(180deg);
+    }
+    9.25% {
+      transform: translate(-575px, 14px) rotate(90deg);
+    }
+    24.226% {
+      transform: translate(-575px, 910px) rotate(90deg);
+    }
+    25.066% {
+      transform: translate(-524px, 961px) rotate(0deg);
+    }
+    45.227% {
+      transform: translate(1212px, 961px) rotate(0deg);
+    }
+    46.07% {
+      transform: translate(1262px, 918px) rotate(270deg);
+    }
+    60.846% {
+      transform: translate(1262px, 20px) rotate(270deg);
+    }
+    61.734% {
+      transform: translate(1232px, -34px) rotate(180deg);
+    }
+    65.96% {
+      transform: translate(943px, -34px) rotate(180deg);
+    }
+    66.9% {
+      transform: translate(870px, -15px) rotate(140deg);
+    }
+    68.22% {
+      transform: translate(822px, 0px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(180deg);
+    }
+  }
+
+  .meteor,.meteor1 {
+    background: url("img/meteor.png") 50% 50% no-repeat;
+    position: absolute;
+    left: 560px;
+    top: 82px;
+    width: 111px;
+    height: 18px;
+    z-index: 11;
+  }
+  .meteor {
+    transform: rotate(180deg);
+    animation: meteor-right 15s infinite linear;
+  }
+  .meteor1 {
+    left: 1260px;
+    animation: meteor-left 15s infinite linear;
+  }
+
+  .slick-slide{
+    width:100%;
+  }
+}

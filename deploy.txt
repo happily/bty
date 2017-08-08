@@ -1,0 +1,21 @@
+连接：ssh root@10.0.1.158 -p 36000
+密码: yunzhihui123
+部署目录：/data/apache-tomcat-7.0.72/webapps
+部署整个文件夹：scp -P 36000 -r /Users/harrylang/Desktop/bty root@10.0.1.158:/data/apache-tomcat-7.0.72/webapps/
+
+外网访问地址：http://219.148.158.38:7701/bty/network.html
+内网地址：http://10.0.1.158:7700/bty/network.html
+
+地图下表格transform后自适应问题需修改react-slick源码
+node_mudules/eact-slick/lib/mixins/helpers.js:
+
+删除getBoundingClientRect方法的操作
+
+getWidth: function getWidth(elem) {
+ return elem.getBoundingClientRect().width || elem.offsetWidth || 0;
+ return elem.offsetWidth || 0;
+},
+getHeight(elem) {
+  return elem.getBoundingClientRect().height || elem.offsetHeight || 0;
+ return elem.offsetHeight || 0;
+},
